@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('admin/posts', 'Admin\\PostsController');
+Route::resource('admin/contas', 'Admin\\ContasController');
+Route::resource('admin/item-orcamentos', 'Admin\\ItemOrcamentosController');

@@ -1,0 +1,8 @@
+
+Gerador de crud
+https://github.com/appzcoder/crud-generator/blob/master/doc/usage.md
+
+php artisan crud:generate Posts --fields="title#string; slug#text; perex#text; published_at#text; enabled#boolean" --view-path=admin --controller-namespace=Admin --route-group=admin --form-helper=html
+
+
+php artisan crud:generate Contas --fields_from_file="drafts/fields.json" --view-path=admin --controller-namespace=Admin --route-group=admin --form-helper=html

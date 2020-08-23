@@ -1,0 +1,62 @@
+{
+    "fields":[
+        {
+            "name": "nome",
+            "type": "string",
+            "nullable": false
+        },
+        {
+            "name": "conta_id",
+            "type": "bigint"
+        },
+        {
+            "name": "data_vencimento",
+            "type": "date"
+        },
+        {
+            "name": "valor",
+            "type": "decimal"
+        },
+        {
+            "name": "data_pagamento",
+            "type": "date"
+        },
+        {
+            "name": "descricao",
+            "type": "string"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "conta_id",
+            "references": "id",
+            "on": "contas",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "conta",
+            "type": "belongsTo",
+            "class": "App\\Conta"
+        }
+    ],    
+    "validations": [
+        {
+            "field": "nome",
+            "rules": "required|max:30"
+        },
+        {
+            "field": "conta",
+            "rules": "required"
+        },
+        {
+            "field": "data_vencimento",
+            "rules": "required"
+        },
+        {
+            "field": "valor",
+            "rules": "required"
+        }
+    ]    
+}
